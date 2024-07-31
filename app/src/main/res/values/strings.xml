@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">SpacePMMP</string>
+    <string name="home_screen_label">Your servers</string>
+    <string name="start_server_label">Start server</string>
+    <string name="console_screen_label">Console</string>
+    <string name="input_command_label">Insert command</string>
+    <string name="no_storage_permission">Denied access to the storage permission</string>
+    <string name="server_running_label">Server is running</string>
+    <string name="server_not_running_label">Server not running</string>
+    <string name="stop_server_label">Stop server</string>
+    <string name="server_not_running_console_label">The server is not running!</string>
+    <string name="go_to_home_label">Go to home</string>
+    <string name="notification_permission_denied">Notification permission was denied!</string>
+    <string name="server_notification_channel_name">Server status notification</string>
+    <string name="insert_command_label">Insert command</string>
+    <string name="settings_to_do">Not finished yet :/</string>
+    <string name="no_servers_created">There are no servers to view</string>
+    <string name="create_server_label">Create new server</string>
+    <string name="add_server_button_label">Add server</string>
+    <string name="select_folder_label">Select folder</string>
+    <string name="server_name_label">Server name</string>
+    <string name="server_folder_label">Server folder</string>
+    <string name="startup_command_label">Startup command</string>
+    <string name="settings_route_title">Settings</string>
+    <string name="console_route_title">Console</string>
+    <string name="servers_route_title">Servers</string>
+    <string name="installing_binaries_label">Installing required executables...</string>
+</resources>
