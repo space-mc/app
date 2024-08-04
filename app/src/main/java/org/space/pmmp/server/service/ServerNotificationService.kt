@@ -8,7 +8,7 @@ import androidx.core.app.NotificationCompat
 const val SERVER_NOTIFICATION_CHANNEL_ID: String = "server_status"
 const val SERVER_NOTIFICATION_ID: Int = 0xdead
 
-class ServerNotificationService: Service() {
+class ServerNotificationService : Service() {
 
     private var running: Boolean = false
 

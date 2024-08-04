@@ -3,17 +3,21 @@ package org.space.pmmp.server
 import android.content.Context
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
+import org.space.pmmp.server.process.Process
 import org.space.pmmp.server.console.ServerConsole
 
 abstract class Server(
     protected val context: Context,
-    protected val serverManager: ServerManager,
-    val information: ServerInformation,
-    protected val console: ServerConsole,
+    val serverManager: ServerManager,
+    var information: MutableState<ServerInformation>,
 ) {
+
+    protected lateinit var console: ServerConsole
 
     var running: MutableState<Boolean> = mutableStateOf(false)
     var state: MutableState<ServerState> = mutableStateOf(ServerState.STOPPED)
+
+    var process: MutableState<Process?> = mutableStateOf(null)
 
     /**
      * This function initiate any state required before the server is able to be started
@@ -41,10 +45,10 @@ abstract class Server(
     /**
      * This function returns the server process handle, used primarily for the ServerConsole thread
      */
-    abstract fun process(): Process
+    abstract fun process(): Process?
 
     fun information(): ServerInformation {
-        return information
+        return information.value
     }
 
     fun context(): Context {
@@ -59,4 +63,6 @@ abstract class Server(
         return console
     }
 
+    abstract fun markRunning()
+    abstract fun markStopping()
 }

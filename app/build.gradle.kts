@@ -10,18 +10,18 @@ android {
     defaultConfig {
         applicationId = "org.space.pmmp"
         minSdk = 27
-        
+
         targetSdk = 28
         versionCode = 1
         versionName = "1.0"
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary = true
         }
+
         externalNativeBuild {
             cmake {
-                cppFlags += ""
+                cFlags += "-O2"
             }
         }
     }
@@ -62,6 +62,12 @@ android {
 
     lint {
         disable.add("ExpiredTargetSdkVersion")
+    }
+    externalNativeBuild {
+        cmake {
+            path = file("src/main/c/CMakeLists.txt")
+            version = "3.22.1"
+        }
     }
 }
 

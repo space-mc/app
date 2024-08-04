@@ -2,12 +2,16 @@ package org.space.pmmp.server.console
 
 import androidx.compose.runtime.mutableStateListOf
 import org.space.pmmp.server.Server
+import java.util.concurrent.BlockingQueue
+import java.util.concurrent.LinkedBlockingQueue
 
-const val DELAY_TO_COMMIT_OUTPUT_LINES_MS = 150
-
-abstract class ServerConsole(protected val server: Server) : Thread() {
+abstract class ServerConsole(protected val server: Server) {
 
     val output: MutableList<ConsoleLine> = mutableStateListOf()
-    val input: MutableList<String> = mutableStateListOf()
+    val input: BlockingQueue<String> = LinkedBlockingQueue()
+
+    abstract fun startConsole()
+
+    abstract fun stopConsole()
 
 }

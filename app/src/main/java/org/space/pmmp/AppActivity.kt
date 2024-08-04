@@ -19,6 +19,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.RequiresApi
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.imePadding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
@@ -36,19 +37,20 @@ import org.space.pmmp.ui.theme.AppTheme
 
 class AppActivity : ComponentActivity() {
 
-    private val serverManager = ServerManager(this)
+    private val serverManager: ServerManager = ServerManager(this)
 
     companion object {
         init {
-            System.loadLibrary("pmmp")
+            System.loadLibrary("pmmp-natives")
         }
+    }
+
+    init {
     }
 
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
 
         enableEdgeToEdge()
 
@@ -62,6 +64,9 @@ class AppActivity : ComponentActivity() {
             requestNotificationPermission()
         }
 
+        // Load all servers
+        serverManager.load(this)
+
         setContent {
             val navController = rememberNavController()
 
@@ -69,7 +74,9 @@ class AppActivity : ComponentActivity() {
                 CompositionLocalProvider(LocalServerManager provides serverManager) {
                     CompositionLocalProvider(LocalAppActivity provides this) {
                         Surface(
-                            modifier = Modifier.fillMaxSize(),
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .imePadding(),
                             color = MaterialTheme.colorScheme.background
                         ) {
                             MainScreen(navController = navController)
@@ -153,7 +160,11 @@ class AppActivity : ComponentActivity() {
                 }
             }
 
-        if (ContextCompat.checkSelfPermission(this, permission) == PackageManager.PERMISSION_GRANTED)
+        if (ContextCompat.checkSelfPermission(
+                this,
+                permission
+            ) == PackageManager.PERMISSION_GRANTED
+        )
             return
 
         requestNotificationPermission.launch(permission)

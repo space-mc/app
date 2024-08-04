@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SpacePMMP</string>
+    <string name="home_screen_label">Seus servidores</string>
+    <string name="start_server_label">Iniciar</string>
+    <string name="console_screen_label">Console</string>
+    <string name="input_command_label">Inserir comando</string>
+    <string name="no_storage_permission">Permissão de armazenamento negada</string>
+    <string name="stop_server_label">Parar</string>
+    <string name="notification_permission_denied">Permissão de notificações negada</string>
+    <string name="server_notification_channel_name">Notificação de status do servidor</string>
+    <string name="settings_to_do">Não foi terminado ainda :/</string>
+    <string name="no_servers_created">Não existe nenhum servidor criado</string>
+    <string name="create_server_label">Criar novo servidor</string>
+    <string name="add_server_button_label">Adicionar servidor</string>
+    <string name="select_folder_label">Selecionar pasta</string>
+    <string name="server_name_label">Nome do servidor</string>
+    <string name="server_folder_label">Pasta do servidor</string>
+    <string name="startup_command_label">Comando de inicialização</string>
+    <string name="settings_route_title">Configurações</string>
+    <string name="console_route_title">Console</string>
+    <string name="servers_route_title">Servidores</string>
+    <string name="installing_binaries_label">Instalando executáveis necessários...</string>
+    <string name="server_state_running">Executando</string>
+    <string name="server_state_stopped">Parado</string>
+    <string name="server_state_starting">Iniciando</string>
+    <string name="server_state_stopping">Parando</string>
+    <string name="server_state_killed">Morto</string>
+    <string name="kill_server_label">Matar</string>
+    <string name="server_process_id_label">ID do Processo:</string>
+    <string name="server_cpu_usage_label">Uso de CPU:</string>
+    <string name="server_memory_usage_label">Uso de Memória:</string>
+    <string name="server_thread_count_label">Quantia de Threads:</string>
+    <string name="uninitialized_value">Não inicializado</string>
+    <string name="edit_server_label">Editar servidor</string>
+    <string name="save_changes_label">Salvar</string>
+    <string name="no_servers_running_label">Não tem nenhum servidor rodando!</string>
+    <string name="creating_process_label">Criando</string>
+    <string name="server_state_failed">Falha</string>
+    <string name="server_failed_no_folder">A pasta do servidor não existe!</string>
+</resources>

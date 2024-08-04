@@ -1,18 +1,13 @@
 <resources>
     <string name="app_name">SpacePMMP</string>
     <string name="home_screen_label">Your servers</string>
-    <string name="start_server_label">Start server</string>
+    <string name="start_server_label">Start</string>
     <string name="console_screen_label">Console</string>
     <string name="input_command_label">Insert command</string>
     <string name="no_storage_permission">Denied access to the storage permission</string>
-    <string name="server_running_label">Server is running</string>
-    <string name="server_not_running_label">Server not running</string>
-    <string name="stop_server_label">Stop server</string>
-    <string name="server_not_running_console_label">The server is not running!</string>
-    <string name="go_to_home_label">Go to home</string>
+    <string name="stop_server_label">Stop</string>
     <string name="notification_permission_denied">Notification permission was denied!</string>
     <string name="server_notification_channel_name">Server status notification</string>
-    <string name="insert_command_label">Insert command</string>
     <string name="settings_to_do">Not finished yet :/</string>
     <string name="no_servers_created">There are no servers to view</string>
     <string name="create_server_label">Create new server</string>
@@ -24,5 +19,25 @@
     <string name="settings_route_title">Settings</string>
     <string name="console_route_title">Console</string>
     <string name="servers_route_title">Servers</string>
-    <string name="installing_binaries_label">Installing required executables...</string>
+    <string name="installing_binaries_label">Installing required executables…</string>
+    <string name="server_state_running">Running</string>
+    <string name="server_state_stopped">Stopped</string>
+    <string name="server_state_starting">Starting</string>
+    <string name="server_state_stopping">Stopping</string>
+    <string name="server_state_killed">Killed</string>
+    <string name="kill_server_label">Kill</string>
+    <string name="server_process_id_label">Process ID:</string>
+    <string name="server_cpu_usage_label">CPU Usage:</string>
+    <string name="server_memory_usage_label">Memory Usage:</string>
+    <string name="server_thread_count_label">"Threads:</string>
+    <string name="uninitialized_value">Uninitialized</string>
+    <string name="edit_server_label">Edit server</string>
+    <string name="save_changes_label">Save</string>
+    <string name="no_servers_running_label">No servers are running!</string>
+    <string name="creating_process_label">Creating</string>
+    <string name="server_state_failed">Failed</string>
+    <string name="server_failed_no_folder">The server folder does not exist</string>
+    <string name="running_category">Running servers</string>
+    <string name="stopped_category">Stopped servers</string>
+    <string name="command_label">Command</string>
 </resources>

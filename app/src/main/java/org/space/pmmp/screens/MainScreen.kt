@@ -2,7 +2,6 @@ package org.space.pmmp.screens
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -95,14 +94,8 @@ fun MainScreen(navController: NavHostController) {
             },
         ) { padding ->
             Box(
-                modifier = Modifier.padding(
-                    PaddingValues(
-                        0.dp,
-                        padding.calculateTopPadding(),
-                        0.dp,
-                        padding.calculateBottomPadding()
-                    )
-                )
+                modifier = Modifier
+                    .padding(bottom = padding.calculateBottomPadding())
             ) {
                 MainScreenRoutes(navController = navController)
             }
@@ -129,7 +122,7 @@ fun MainScreenBottomBar(navController: NavHostController) {
     ) {
         navigationRoutes.forEachIndexed { index, item ->
             NavigationBarItem(
-                alwaysShowLabel = true,
+                alwaysShowLabel = false,
 
                 icon = { Icon(item.icon!!, stringResource(item.title)) },
                 label = { Text(stringResource(item.title)) },

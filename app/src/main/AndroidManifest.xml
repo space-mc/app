@@ -6,7 +6,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
@@ -23,8 +23,10 @@
         tools:targetApi="28">
         <activity
             android:name=".AppActivity"
+            android:configChanges="colorMode|uiMode|orientation|screenSize|screenLayout"
             android:exported="true"
-            android:theme="@style/Theme.SpacePMMP">
+            android:theme="@style/Theme.SpacePMMP"
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
